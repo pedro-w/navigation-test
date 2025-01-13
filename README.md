@@ -15,7 +15,7 @@ I believe this ought to work (based on copy-pasted code) but when I run it, the 
 
 When I run in Visual Studio there is an assert failure at line 159 of `PaperUIManagerModule.cpp`
 
-```
+```C++
   void createView(int64_t reactTag, std::string viewName, int64_t rootTag, React::JSValueObject &&props) noexcept {
     m_nativeUIManager->ensureInBatch();
     if (auto viewManager = GetViewManager(viewName)) {
@@ -39,4 +39,5 @@ When I run in Visual Studio there is an assert failure at line 159 of `PaperUIMa
   }
 ```
 
+The variable `viewName` is "RNSScreenContentWrapper" 
 
